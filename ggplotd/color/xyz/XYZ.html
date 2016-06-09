@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="../../../style.css"/>
+<script src="../../../highlight.pack.js"></script>
+<title>XYZ</title>
+<base href="../../../"/>
+<script src="search.js"></script>
+<script src="show_hide.js"></script>
+</head>
+<body>
+<div class="main">
+<div class="breadcrumbs">
+<table id="results"></table>
+<a href="index.html" class="home">⌂</a><input type="search" id="search" placeholder="Search" onkeyup="searchSubmit(this.value, event)"/>
+<small>ggplotd.color.<a href=ggplotd/color/xyz.html>xyz</a>.</small><span class="highlight">XYZ</span>
+</div>
+<div class="sidebar">
+<a href="ggplotd/color/xyz.html#hide-toc" class="hide" id="hide-toc">&#171;</a>
+<a href="ggplotd/color/xyz.html#show-toc" class="show" id="show-toc">&#187;</a>
+<div id="toc-id" class="toc">
+<ul><li><a href="example.html">example</a></li>
+<li><span class="package" onclick="show_hide('ggplotd');">ggplotd</span>
+<ul id="ggplotd" style='display:block'>
+<li>ggplotd.<a href="ggplotd/aes.html">aes</a></li>
+<li>ggplotd.<a href="ggplotd/axes.html">axes</a></li>
+<li>ggplotd.<a href="ggplotd/bounds.html">bounds</a></li>
+<li><span class="package" onclick="show_hide('ggplotd.color');">ggplotd.<a href="ggplotd/color.html">color</a></span>
+<ul id="ggplotd.color" style='display:block'>
+<li>ggplotd.color.<a href="ggplotd/color/conv.html">conv</a></li>
+<li>ggplotd.color.<a href="ggplotd/color/hsx.html">hsx</a></li>
+<li>ggplotd.color.<a href="ggplotd/color/rgb.html">rgb</a></li>
+<li><span class=" selected">ggplotd.color.<a href="ggplotd/color/xyz.html">xyz</a></span>
+</li>
+</ul>
+</li>
+<li>ggplotd.<a href="ggplotd/colour.html">colour</a></li>
+<li>ggplotd.<a href="ggplotd/colourspace.html">colourspace</a></li>
+<li>ggplotd.<a href="ggplotd/geom.html">geom</a></li>
+<li>ggplotd.<a href="ggplotd/geometry.html">geometry</a></li>
+<li>ggplotd.<a href="ggplotd/ggplotd.html">ggplotd</a></li>
+<li>ggplotd.<a href="ggplotd/gtk.html">gtk</a></li>
+<li>ggplotd.<a href="ggplotd/math.html">math</a></li>
+<li>ggplotd.<a href="ggplotd/meta.html">meta</a></li>
+<li>ggplotd.<a href="ggplotd/range.html">range</a></li>
+<li>ggplotd.<a href="ggplotd/scale.html">scale</a></li>
+<li>ggplotd.<a href="ggplotd/stat.html">stat</a></li>
+<li>ggplotd.<a href="ggplotd/theme.html">theme</a></li>
+</ul>
+</li>
+
+</ul>
+</div></div>
+<div class="content">
+<div class="aggregate-symbol"><div class="description"><pre><code>public @safe pure nothrow @nogc struct XYZ(F = <a href="http://dlang.org/type.html#basic-data-types">float</a>)
+if(isFloatingPoint!F)
+</code></pre>
+<div class="section"><h2></h2>
+<p>A CIE 1931 XYZ color, parameterised for component type.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section "><h2>Example</h2>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<pre><code>// CIE <a href="ggplotd/color/xyz/XYZ.html">XYZ</a> 1931 color with float components
+alias XYZf = <a href="ggplotd/color/xyz/XYZ.html">XYZ</a>!float;
+
+XYZf c = XYZf(0.8, 1, 1.2);
+
+// <a href="ggplotd/color/xyz/XYZ.html#tristimulus">tristimulus</a>() returns a tuple of the components
+assert(c.<a href="ggplotd/color/xyz/XYZ.html#tristimulus">tristimulus</a> == tuple(c.<a href="ggplotd/color/xyz/XYZ.html#X">X</a>, c.<a href="ggplotd/color/xyz/XYZ.html#Y">Y</a>, c.<a href="ggplotd/color/xyz/XYZ.html#Z">Z</a>));
+
+// test <a href="ggplotd/color/xyz/XYZ.html">XYZ</a> operators and functions
+static assert(XYZf(0, 0.5, 0) + XYZf(0.5, 0.5, 1) == XYZf(0.5, 1, 1));
+static assert(XYZf(0.5, 0.5, 1) * 100.0 == XYZf(50, 50, 100));
+
+</code></pre>
+
+</div>
+</div><a class="anchor" id="ComponentType"></a><div class="symbol"><div class="description"><pre><code>alias ComponentType = F
+</code></pre>
+<div class="section"><h2></h2>
+<p>Type of the color components.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="X"></a><div class="symbol"><div class="description"><pre><code>public @safe pure nothrow @nogc F X
+</code></pre>
+<div class="section"><h2></h2>
+<p>X value.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="Y"></a><div class="symbol"><div class="description"><pre><code>public @safe pure nothrow @nogc F Y
+</code></pre>
+<div class="section"><h2></h2>
+<p>Y value.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="Z"></a><div class="symbol"><div class="description"><pre><code>public @safe pure nothrow @nogc F Z
+</code></pre>
+<div class="section"><h2></h2>
+<p>Z value.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="tristimulus"></a><div class="symbol"><div class="description"><pre><code>public @safe pure nothrow @nogc <a href="ggplotd/color/xyz/XYZ.html#tristimulus">tristimulus</a>() const
+</code></pre>
+<div class="section"><h2></h2>
+<p>Return the XYZ tristimulus values as a tuple.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="this"></a><div class="symbol"><div class="description"><pre><code>public @safe pure nothrow @nogc this(
+    <a href="ggplotd/color/xyz/XYZ.html#ComponentType">ComponentType</a> X, 
+    <a href="ggplotd/color/xyz/XYZ.html#ComponentType">ComponentType</a> Y, 
+    <a href="ggplotd/color/xyz/XYZ.html#ComponentType">ComponentType</a> Z)
+</code></pre>
+<div class="section"><h2></h2>
+<p>Construct a color from XYZ values.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><div class="section members"><h2>Aliases</h2><table><tr><td><a href="ggplotd/color/xyz/XYZ.html#ComponentType">ComponentType</a></td><td><pre><code>F
+</code></pre>
+</td><td></td></tr></table><h2>Variables</h2><table><tr><td><a href="ggplotd/color/xyz/XYZ.html#X">X</a></td><td><pre><code>F
+</code></pre>
+</td><td></td></tr><tr><td><a href="ggplotd/color/xyz/XYZ.html#Y">Y</a></td><td><pre><code>F
+</code></pre>
+</td><td></td></tr><tr><td><a href="ggplotd/color/xyz/XYZ.html#Z">Z</a></td><td><pre><code>F
+</code></pre>
+</td><td></td></tr></table><h2>Functions</h2><table><tr><td><a href="ggplotd/color/xyz/XYZ.html#tristimulus">tristimulus</a><span class="extrainfo"><span class="method-attribs"><span class="attr-const">const</span></span><span class="stor-classes"><span class="attr-property">@property</span>, <span class="attr-auto">auto</span></span></span></td><td></td><td></td></tr><tr><td><a href="ggplotd/color/xyz/XYZ.html#this">this</a></td><td></td><td></td></tr></table>
+</div>
+</div><script>hljs.initHighlightingOnLoad();</script>
+
+</div>
+<footer>
+Generated with <a href="https://github.com/kiith-sa/harbored-mod">harbored-mod</a>
+</footer>
+</div>
+</body>
+</html>

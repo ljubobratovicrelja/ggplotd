@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="../../../style.css"/>
+<script src="../../../highlight.pack.js"></script>
+<title>HSx</title>
+<base href="../../../"/>
+<script src="search.js"></script>
+<script src="show_hide.js"></script>
+</head>
+<body>
+<div class="main">
+<div class="breadcrumbs">
+<table id="results"></table>
+<a href="index.html" class="home">⌂</a><input type="search" id="search" placeholder="Search" onkeyup="searchSubmit(this.value, event)"/>
+<small>ggplotd.color.<a href=ggplotd/color/hsx.html>hsx</a>.</small><span class="highlight">HSx</span>
+</div>
+<div class="sidebar">
+<a href="ggplotd/color/hsx.html#hide-toc" class="hide" id="hide-toc">&#171;</a>
+<a href="ggplotd/color/hsx.html#show-toc" class="show" id="show-toc">&#187;</a>
+<div id="toc-id" class="toc">
+<ul><li><a href="example.html">example</a></li>
+<li><span class="package" onclick="show_hide('ggplotd');">ggplotd</span>
+<ul id="ggplotd" style='display:block'>
+<li>ggplotd.<a href="ggplotd/aes.html">aes</a></li>
+<li>ggplotd.<a href="ggplotd/axes.html">axes</a></li>
+<li>ggplotd.<a href="ggplotd/bounds.html">bounds</a></li>
+<li><span class="package" onclick="show_hide('ggplotd.color');">ggplotd.<a href="ggplotd/color.html">color</a></span>
+<ul id="ggplotd.color" style='display:block'>
+<li>ggplotd.color.<a href="ggplotd/color/conv.html">conv</a></li>
+<li><span class=" selected">ggplotd.color.<a href="ggplotd/color/hsx.html">hsx</a></span>
+</li>
+<li>ggplotd.color.<a href="ggplotd/color/rgb.html">rgb</a></li>
+<li>ggplotd.color.<a href="ggplotd/color/xyz.html">xyz</a></li>
+</ul>
+</li>
+<li>ggplotd.<a href="ggplotd/colour.html">colour</a></li>
+<li>ggplotd.<a href="ggplotd/colourspace.html">colourspace</a></li>
+<li>ggplotd.<a href="ggplotd/geom.html">geom</a></li>
+<li>ggplotd.<a href="ggplotd/geometry.html">geometry</a></li>
+<li>ggplotd.<a href="ggplotd/ggplotd.html">ggplotd</a></li>
+<li>ggplotd.<a href="ggplotd/gtk.html">gtk</a></li>
+<li>ggplotd.<a href="ggplotd/math.html">math</a></li>
+<li>ggplotd.<a href="ggplotd/meta.html">meta</a></li>
+<li>ggplotd.<a href="ggplotd/range.html">range</a></li>
+<li>ggplotd.<a href="ggplotd/scale.html">scale</a></li>
+<li>ggplotd.<a href="ggplotd/stat.html">stat</a></li>
+<li>ggplotd.<a href="ggplotd/theme.html">theme</a></li>
+</ul>
+</li>
+
+</ul>
+</div></div>
+<div class="content">
+<div class="aggregate-symbol"><div class="description"><pre><code>public @safe pure nothrow @nogc struct HSx(<a href="ggplotd/color/hsx/HSxType.html">HSxType</a> type_, CT = <a href="http://dlang.org/type.html#basic-data-types">float</a>, <a href="ggplotd/color/rgb/RGBColorSpace.html">RGBColorSpace</a> colorSpace_ = <a href="ggplotd/color/rgb/RGBColorSpace.html">RGBColorSpace</a>.sRGB)
+if(isFloatingPoint!CT || isUnsigned!CT)
+</code></pre>
+<div class="section"><h2></h2>
+<p>HSx color space is used to describe a suite of angular color spaces including HSL, HSV, HSI, HSY.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section "><h2>Example</h2>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<pre><code>// <a href="ggplotd/color/hsx.html#HSL">HSL</a> color with float components
+alias HSLf = <a href="ggplotd/color/hsx/HSx.html">HSx</a>!(<a href="ggplotd/color/hsx/HSxType.html#HSL">HSxType.HSL</a>, float);
+
+HSLf c = HSLf(3.1415, 1, 0.5);
+
+// test <a href="ggplotd/color/hsx.html#HSL">HSL</a> operators and functions
+static assert(HSLf(3.1415, 0.2, 0.5) + HSLf(0, 0.5, 0.5) == HSLf(3.1415, 0.7, 1));
+static assert(HSLf(2, 0.5, 1) * 100.0 == HSLf(200, 50, 100));
+
+</code></pre>
+
+</div>
+<div class="section "><h2>Example</h2>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<pre><code>// <a href="ggplotd/color/hsx.html#HSV">HSV</a> color with float components
+alias HSVf = <a href="ggplotd/color/hsx/HSx.html">HSx</a>!(<a href="ggplotd/color/hsx/HSxType.html#HSV">HSxType.HSV</a>, float);
+
+HSVf c = HSVf(3.1415, 1, 0.5);
+
+// test <a href="ggplotd/color/hsx.html#HSV">HSV</a> operators and functions
+static assert(HSVf(3.1415, 0.2, 0.5) + HSVf(0, 0.5, 0.5) == HSVf(3.1415, 0.7, 1));
+static assert(HSVf(2, 0.5, 1) * 100.0 == HSVf(200, 50, 100));
+
+</code></pre>
+
+</div>
+<div class="section "><h2>Example</h2>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<pre><code>// <a href="ggplotd/color/hsx.html#HSI">HSI</a> color with float components
+alias HSIf = <a href="ggplotd/color/hsx/HSx.html">HSx</a>!(<a href="ggplotd/color/hsx/HSxType.html#HSI">HSxType.HSI</a>, float);
+
+HSIf c = HSIf(3.1415, 1, 0.5);
+
+// test <a href="ggplotd/color/hsx.html#HSI">HSI</a> operators and functions
+static assert(HSIf(3.1415, 0.2, 0.5) + HSIf(0, 0.5, 0.5) == HSIf(3.1415, 0.7, 1));
+static assert(HSIf(2, 0.5, 1) * 100.0 == HSIf(200, 50, 100));
+
+</code></pre>
+
+</div>
+<div class="section "><h2>Example</h2>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<pre><code>// <a href="ggplotd/color/hsx.html#HCY">HCY</a> color with float components
+alias HCYf = <a href="ggplotd/color/hsx/HSx.html">HSx</a>!(<a href="ggplotd/color/hsx/HSxType.html#HCY">HSxType.HCY</a>, float);
+
+HCYf c = HCYf(3.1415, 1, 0.5);
+
+// test <a href="ggplotd/color/hsx.html#HCY">HCY</a> operators and functions
+static assert(HCYf(3.1415, 0.2, 0.5) + HCYf(0, 0.5, 0.5) == HCYf(3.1415, 0.7, 1));
+static assert(HCYf(2, 0.5, 1) * 100.0 == HCYf(200, 50, 100));
+
+</code></pre>
+
+</div>
+</div><a class="anchor" id="ComponentType"></a><div class="symbol"><div class="description"><pre><code>alias ComponentType = CT
+</code></pre>
+<div class="section"><h2></h2>
+<p>Type of the color components.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="colorSpace"></a><div class="symbol"><div class="description"><pre><code>public @safe pure nothrow @nogc auto colorSpace
+</code></pre>
+<div class="section"><h2></h2>
+<p>The color space specified.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="type"></a><div class="symbol"><div class="description"><pre><code>public @safe pure nothrow @nogc auto type
+</code></pre>
+<div class="section"><h2></h2>
+<p>The color type from the HSx family.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><div class="section members"><h2>Aliases</h2><table><tr><td><a href="ggplotd/color/hsx/HSx.html#ComponentType">ComponentType</a></td><td><pre><code>CT
+</code></pre>
+</td><td></td></tr></table><h2>Variables</h2><table><tr><td><a href="ggplotd/color/hsx/HSx.html#colorSpace">colorSpace</a></td><td><pre><code>auto
+</code></pre>
+</td><td></td></tr><tr><td><a href="ggplotd/color/hsx/HSx.html#type">type</a></td><td><pre><code>auto
+</code></pre>
+</td><td></td></tr></table>
+</div>
+</div><script>hljs.initHighlightingOnLoad();</script>
+
+</div>
+<footer>
+Generated with <a href="https://github.com/kiith-sa/harbored-mod">harbored-mod</a>
+</footer>
+</div>
+</body>
+</html>

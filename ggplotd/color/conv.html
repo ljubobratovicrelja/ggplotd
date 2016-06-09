@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="../../style.css"/>
+<script src="../../highlight.pack.js"></script>
+<title>ggplotd.color.conv</title>
+<base href="../../"/>
+<script src="search.js"></script>
+<script src="show_hide.js"></script>
+</head>
+<body>
+<div class="main">
+<div class="breadcrumbs">
+<table id="results"></table>
+<a href="index.html" class="home">⌂</a><input type="search" id="search" placeholder="Search" onkeyup="searchSubmit(this.value, event)"/>
+<small>ggplotd.color.conv</small>
+</div>
+<div class="sidebar">
+<a href="ggplotd/color/conv.html#hide-toc" class="hide" id="hide-toc">&#171;</a>
+<a href="ggplotd/color/conv.html#show-toc" class="show" id="show-toc">&#187;</a>
+<div id="toc-id" class="toc">
+<ul><li><a href="example.html">example</a></li>
+<li><span class="package" onclick="show_hide('ggplotd');">ggplotd</span>
+<ul id="ggplotd" style='display:block'>
+<li>ggplotd.<a href="ggplotd/aes.html">aes</a></li>
+<li>ggplotd.<a href="ggplotd/axes.html">axes</a></li>
+<li>ggplotd.<a href="ggplotd/bounds.html">bounds</a></li>
+<li><span class="package" onclick="show_hide('ggplotd.color');">ggplotd.<a href="ggplotd/color.html">color</a></span>
+<ul id="ggplotd.color" style='display:block'>
+<li><span class=" selected">ggplotd.color.<a href="ggplotd/color/conv.html">conv</a></span>
+</li>
+<li>ggplotd.color.<a href="ggplotd/color/hsx.html">hsx</a></li>
+<li>ggplotd.color.<a href="ggplotd/color/rgb.html">rgb</a></li>
+<li>ggplotd.color.<a href="ggplotd/color/xyz.html">xyz</a></li>
+</ul>
+</li>
+<li>ggplotd.<a href="ggplotd/colour.html">colour</a></li>
+<li>ggplotd.<a href="ggplotd/colourspace.html">colourspace</a></li>
+<li>ggplotd.<a href="ggplotd/geom.html">geom</a></li>
+<li>ggplotd.<a href="ggplotd/geometry.html">geometry</a></li>
+<li>ggplotd.<a href="ggplotd/ggplotd.html">ggplotd</a></li>
+<li>ggplotd.<a href="ggplotd/gtk.html">gtk</a></li>
+<li>ggplotd.<a href="ggplotd/math.html">math</a></li>
+<li>ggplotd.<a href="ggplotd/meta.html">meta</a></li>
+<li>ggplotd.<a href="ggplotd/range.html">range</a></li>
+<li>ggplotd.<a href="ggplotd/scale.html">scale</a></li>
+<li>ggplotd.<a href="ggplotd/stat.html">stat</a></li>
+<li>ggplotd.<a href="ggplotd/theme.html">theme</a></li>
+</ul>
+</li>
+
+</ul>
+</div></div>
+<div class="content">
+<div class="aggregate-symbol"><a class="anchor" id="convertColor"></a><div class="symbol"><div class="description"><pre><code>public @safe pure nothrow @nogc To <a href="ggplotd/color/conv.html#convertColor">convertColor</a>(To, From)(From color) 
+if(isColor!To && isColor!From)
+</code></pre>
+<div class="section"><h2></h2>
+<p>Convert between color types.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="colorFromString"></a><div class="symbol"><div class="description"><pre><code>public @safe pure nothrow @nogc Color <a href="ggplotd/color/conv.html#colorFromString">colorFromString</a>(Color = <a href="ggplotd/color.html#RGB8">RGB8</a>, C)(const(C)[] hex) 
+if(isSomeChar!C)
+</code></pre>
+<div class="section"><h2></h2>
+<p>Create a color from hex strings in the standard forms: (#/$/0x)rgb/argb/rrggbb/aarrggbb
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section "><h2>Example</h2>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<pre><code>// common hex formats supported:
+
+// 3 digits
+static assert(<a href="ggplotd/color/conv.html#colorFromString">colorFromString</a>("F80") == <a href="ggplotd/color.html#RGB8">RGB8</a>(0xFF,0x88, 0x00));
+static assert(<a href="ggplotd/color/conv.html#colorFromString">colorFromString</a>("#F80") == <a href="ggplotd/color.html#RGB8">RGB8</a>(0xFF,0x88, 0x00));
+static assert(<a href="ggplotd/color/conv.html#colorFromString">colorFromString</a>("$F80") == <a href="ggplotd/color.html#RGB8">RGB8</a>(0xFF,0x88, 0x00));
+static assert(<a href="ggplotd/color/conv.html#colorFromString">colorFromString</a>("0xF80") == <a href="ggplotd/color.html#RGB8">RGB8</a>(0xFF,0x88, 0x00));
+
+// 6 digits
+static assert(<a href="ggplotd/color/conv.html#colorFromString">colorFromString</a>("FF8000") == <a href="ggplotd/color.html#RGB8">RGB8</a>(0xFF,0x80, 0x00));
+static assert(<a href="ggplotd/color/conv.html#colorFromString">colorFromString</a>("#FF8000") == <a href="ggplotd/color.html#RGB8">RGB8</a>(0xFF,0x80, 0x00));
+static assert(<a href="ggplotd/color/conv.html#colorFromString">colorFromString</a>("$FF8000") == <a href="ggplotd/color.html#RGB8">RGB8</a>(0xFF,0x80, 0x00));
+static assert(<a href="ggplotd/color/conv.html#colorFromString">colorFromString</a>("0xFF8000") == <a href="ggplotd/color.html#RGB8">RGB8</a>(0xFF,0x80, 0x00));
+
+// 4/8 digita (/w alpha)
+static assert(<a href="ggplotd/color/conv.html#colorFromString">colorFromString</a>!<a href="ggplotd/color.html#RGBA8">RGBA8</a>("#8C41") == <a href="ggplotd/color.html#RGBA8">RGBA8</a>(0xCC,0x44, 0x11, 0x88));
+static assert(<a href="ggplotd/color/conv.html#colorFromString">colorFromString</a>!<a href="ggplotd/color.html#RGBA8">RGBA8</a>("#80CC4401") == <a href="ggplotd/color.html#RGBA8">RGBA8</a>(0xCC,0x44, 0x01, 0x80));
+
+</code></pre>
+
+</div>
+</div></div><div class="description"><div class="section"><h2></h2>
+<p>This module implements various _color type conversions.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section"><h2>Authors</h2>
+<p>Manu Evans
+</p>
+
+
+</div>
+<div class="section"><h2>Copyright</h2>
+<p>Copyright (c) 2015, Manu Evans.
+</p>
+
+
+</div>
+<div class="section"><h2>License</h2>
+<p><a href="http://boost.org/LICENSE_1_0.txt">Boost License 1.0</a>
+</p>
+
+
+</div>
+<div class="section"><h2>Source</h2>
+
+
+</div>
+</div><div class="section members"><h2>Functions</h2><table><tr><td><a href="ggplotd/color/conv.html#convertColor">convertColor</a><span class="extrainfo"></span></td><td></td><td></td></tr><tr><td><a href="ggplotd/color/conv.html#colorFromString">colorFromString</a><span class="extrainfo"></span></td><td></td><td></td></tr></table>
+</div>
+</div><script>hljs.initHighlightingOnLoad();</script>
+
+</div>
+<footer>
+Generated with <a href="https://github.com/kiith-sa/harbored-mod">harbored-mod</a>
+</footer>
+</div>
+</body>
+</html>

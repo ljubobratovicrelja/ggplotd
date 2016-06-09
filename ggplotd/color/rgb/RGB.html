@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="../../../style.css"/>
+<script src="../../../highlight.pack.js"></script>
+<title>RGB</title>
+<base href="../../../"/>
+<script src="search.js"></script>
+<script src="show_hide.js"></script>
+</head>
+<body>
+<div class="main">
+<div class="breadcrumbs">
+<table id="results"></table>
+<a href="index.html" class="home">⌂</a><input type="search" id="search" placeholder="Search" onkeyup="searchSubmit(this.value, event)"/>
+<small>ggplotd.color.<a href=ggplotd/color/rgb.html>rgb</a>.</small><span class="highlight">RGB</span>
+</div>
+<div class="sidebar">
+<a href="ggplotd/color/rgb.html#hide-toc" class="hide" id="hide-toc">&#171;</a>
+<a href="ggplotd/color/rgb.html#show-toc" class="show" id="show-toc">&#187;</a>
+<div id="toc-id" class="toc">
+<ul><li><a href="example.html">example</a></li>
+<li><span class="package" onclick="show_hide('ggplotd');">ggplotd</span>
+<ul id="ggplotd" style='display:block'>
+<li>ggplotd.<a href="ggplotd/aes.html">aes</a></li>
+<li>ggplotd.<a href="ggplotd/axes.html">axes</a></li>
+<li>ggplotd.<a href="ggplotd/bounds.html">bounds</a></li>
+<li><span class="package" onclick="show_hide('ggplotd.color');">ggplotd.<a href="ggplotd/color.html">color</a></span>
+<ul id="ggplotd.color" style='display:block'>
+<li>ggplotd.color.<a href="ggplotd/color/conv.html">conv</a></li>
+<li>ggplotd.color.<a href="ggplotd/color/hsx.html">hsx</a></li>
+<li><span class=" selected">ggplotd.color.<a href="ggplotd/color/rgb.html">rgb</a></span>
+</li>
+<li>ggplotd.color.<a href="ggplotd/color/xyz.html">xyz</a></li>
+</ul>
+</li>
+<li>ggplotd.<a href="ggplotd/colour.html">colour</a></li>
+<li>ggplotd.<a href="ggplotd/colourspace.html">colourspace</a></li>
+<li>ggplotd.<a href="ggplotd/geom.html">geom</a></li>
+<li>ggplotd.<a href="ggplotd/geometry.html">geometry</a></li>
+<li>ggplotd.<a href="ggplotd/ggplotd.html">ggplotd</a></li>
+<li>ggplotd.<a href="ggplotd/gtk.html">gtk</a></li>
+<li>ggplotd.<a href="ggplotd/math.html">math</a></li>
+<li>ggplotd.<a href="ggplotd/meta.html">meta</a></li>
+<li>ggplotd.<a href="ggplotd/range.html">range</a></li>
+<li>ggplotd.<a href="ggplotd/scale.html">scale</a></li>
+<li>ggplotd.<a href="ggplotd/stat.html">stat</a></li>
+<li>ggplotd.<a href="ggplotd/theme.html">theme</a></li>
+</ul>
+</li>
+
+</ul>
+</div></div>
+<div class="content">
+<div class="aggregate-symbol"><div class="description"><pre><code>public @safe pure nothrow @nogc struct RGB(string components_, ComponentType_, <a href="http://dlang.org/type.html#basic-data-types">bool</a> linear_ = false, <a href="ggplotd/color/rgb/RGBColorSpace.html">RGBColorSpace</a> colorSpace_ = <a href="ggplotd/color/rgb/RGBColorSpace.html">RGBColorSpace</a>.sRGB)
+if(isNumeric!ComponentType_)
+</code></pre>
+<div class="section"><h2></h2>
+<p>An RGB color, parameterised with components, component type, and color space specification.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section"><h2>Parameters</h2>
+<table class="params">
+<tr class="param"><td class="paramName">components_</td><td class="paramDoc"><p>Components that shall be available. Struct is populated with components in the order specified.
+Valid components are:
+  "r" = red
+  "g" = green
+  "b" = blue
+  "a" = alpha
+  "l" = luminance
+  "x" = placeholder/padding (no significant value)
+</p>
+</td></tr>
+<tr class="param"><td class="paramName">ComponentType_</td><td class="paramDoc"><p>Type for the color channels. May be a basic integer or floating point type.
+</p>
+</td></tr>
+<tr class="param"><td class="paramName">linear_</td><td class="paramDoc"><p>Color is stored with linear luminance.
+</p>
+</td></tr>
+<tr class="param"><td class="paramName">colorSpace_</td><td class="paramDoc"><p>Color will be within the specified color space.
+</p>
+</td></tr>
+</table>
+</div>
+</div><a class="anchor" id="ComponentType"></a><div class="symbol"><div class="description"><pre><code>alias ComponentType = ComponentType_
+</code></pre>
+<div class="section"><h2></h2>
+<p>Type of the color components.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="components"></a><div class="symbol"><div class="description"><pre><code>public @safe pure nothrow @nogc string components
+</code></pre>
+<div class="section"><h2></h2>
+<p>The color components that were specified.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="colorSpace"></a><div class="symbol"><div class="description"><pre><code>public @safe pure nothrow @nogc <a href="ggplotd/color/rgb/RGBColorSpace.html">RGBColorSpace</a> colorSpace
+</code></pre>
+<div class="section"><h2></h2>
+<p>The color space specified.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="linear"></a><div class="symbol"><div class="description"><pre><code>public @safe pure nothrow @nogc <a href="http://dlang.org/type.html#basic-data-types">bool</a> linear
+</code></pre>
+<div class="section"><h2></h2>
+<p>If the color is stored linearly (without gamma applied).
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="hasComponent"></a><div class="symbol"><div class="description"><pre><code>public @safe pure nothrow @nogc <a href="http://dlang.org/type.html#basic-data-types">bool</a> hasComponent
+</code></pre>
+<div class="section"><h2></h2>
+<p>Test if a particular component is present.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="hasAlpha"></a><div class="symbol"><div class="description"><pre><code>public @safe pure nothrow @nogc <a href="http://dlang.org/type.html#basic-data-types">bool</a> hasAlpha
+</code></pre>
+<div class="section"><h2></h2>
+<p>If the color has alpha.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="tristimulus"></a><div class="symbol"><div class="description"><pre><code>public @safe pure nothrow @nogc <a href="ggplotd/color/rgb/RGB.html#tristimulus">tristimulus</a>() const
+</code></pre>
+<div class="section"><h2></h2>
+<p>Return the RGB tristimulus values as a tuple.
+       These will always be ordered (R, G, B).
+       Any color channels not present will be 0.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section "><h2>Example</h2>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<pre><code>// BGR color
+auto c = <a href="ggplotd/color.html#BGR8">BGR8</a>(255, 128, 10);
+
+// <a href="ggplotd/color/rgb/RGB.html#tristimulus">tristimulus</a> always returns tuple in <a href="ggplotd/color/rgb/RGB.html">RGB</a> order
+
+</code></pre>
+
+</div>
+</div></div><a class="anchor" id="tristimulusWithAlpha"></a><div class="symbol"><div class="description"><pre><code>public @safe pure nothrow @nogc <a href="ggplotd/color/rgb/RGB.html#tristimulusWithAlpha">tristimulusWithAlpha</a>() const
+</code></pre>
+<div class="section"><h2></h2>
+<p>Return the RGB tristimulus values + alpha as a tuple.
+       These will always be ordered (R, G, B, A).
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section "><h2>Example</h2>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<pre><code>// BGRA color
+auto c = <a href="ggplotd/color.html#BGRA8">BGRA8</a>(255, 128, 10, 80);
+
+// <a href="ggplotd/color/rgb/RGB.html#tristimulusWithAlpha">tristimulusWithAlpha</a> always returns tuple in RGBA order
+
+</code></pre>
+
+</div>
+</div></div><a class="anchor" id="this"></a><div class="symbol"><div class="description"><pre><code>public @safe pure nothrow @nogc this(
+    <a href="ggplotd/color/rgb/RGB.html#ComponentType">ComponentType</a> r, 
+    <a href="ggplotd/color/rgb/RGB.html#ComponentType">ComponentType</a> g, 
+    <a href="ggplotd/color/rgb/RGB.html#ComponentType">ComponentType</a> b, 
+    <a href="ggplotd/color/rgb/RGB.html#ComponentType">ComponentType</a> a = defaultAlpha!<a href="ggplotd/color/rgb/RGB.html#ComponentType">ComponentType</a>)
+</code></pre>
+<div class="section"><h2></h2>
+<p>Construct a color from RGB and optional alpha values.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="this"></a><div class="symbol"><div class="description"><pre><code>public @safe pure nothrow @nogc this(
+    <a href="ggplotd/color/rgb/RGB.html#ComponentType">ComponentType</a> l, 
+    <a href="ggplotd/color/rgb/RGB.html#ComponentType">ComponentType</a> a = defaultAlpha!<a href="ggplotd/color/rgb/RGB.html#ComponentType">ComponentType</a>)
+</code></pre>
+<div class="section"><h2></h2>
+<p>Construct a color from a luminance and optional alpha value.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="this"></a><div class="symbol"><div class="description"><pre><code>public @safe pure nothrow @nogc this(C)(const(C)[] hex) 
+if(isSomeChar!C)
+</code></pre>
+<div class="section"><h2></h2>
+<p>Construct a color from a hex string.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><div class="section members"><h2>Aliases</h2><table><tr><td><a href="ggplotd/color/rgb/RGB.html#ComponentType">ComponentType</a></td><td><pre><code>ComponentType_
+</code></pre>
+</td><td></td></tr></table><h2>Variables</h2><table><tr><td><a href="ggplotd/color/rgb/RGB.html#components">components</a></td><td><pre><code>string
+</code></pre>
+</td><td></td></tr><tr><td><a href="ggplotd/color/rgb/RGB.html#colorSpace">colorSpace</a></td><td><pre><code><a href="ggplotd/color/rgb/RGBColorSpace.html">RGBColorSpace</a>
+</code></pre>
+</td><td></td></tr><tr><td><a href="ggplotd/color/rgb/RGB.html#linear">linear</a></td><td><pre><code><a href="http://dlang.org/type.html#basic-data-types">bool</a>
+</code></pre>
+</td><td></td></tr><tr><td><a href="ggplotd/color/rgb/RGB.html#hasComponent">hasComponent</a></td><td><pre><code><a href="http://dlang.org/type.html#basic-data-types">bool</a>
+</code></pre>
+</td><td></td></tr><tr><td><a href="ggplotd/color/rgb/RGB.html#hasAlpha">hasAlpha</a></td><td><pre><code><a href="http://dlang.org/type.html#basic-data-types">bool</a>
+</code></pre>
+</td><td></td></tr></table><h2>Functions</h2><table><tr><td><a href="ggplotd/color/rgb/RGB.html#tristimulus">tristimulus</a><span class="extrainfo"><span class="method-attribs"><span class="attr-const">const</span></span><span class="stor-classes"><span class="attr-property">@property</span>, <span class="attr-auto">auto</span></span></span></td><td></td><td></td></tr><tr><td><a href="ggplotd/color/rgb/RGB.html#tristimulusWithAlpha">tristimulusWithAlpha</a><span class="extrainfo"><span class="method-attribs"><span class="attr-const">const</span></span><span class="stor-classes"><span class="attr-property">@property</span>, <span class="attr-auto">auto</span></span></span></td><td></td><td></td></tr><tr><td><a href="ggplotd/color/rgb/RGB.html#this">this</a></td><td></td><td></td></tr><tr><td><a href="ggplotd/color/rgb/RGB.html#this">this</a></td><td></td><td></td></tr><tr><td><a href="ggplotd/color/rgb/RGB.html#this">this</a></td><td></td><td></td></tr></table>
+</div>
+</div><script>hljs.initHighlightingOnLoad();</script>
+
+</div>
+<footer>
+Generated with <a href="https://github.com/kiith-sa/harbored-mod">harbored-mod</a>
+</footer>
+</div>
+</body>
+</html>

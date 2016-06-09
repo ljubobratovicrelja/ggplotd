@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="../../style.css"/>
+<script src="../../highlight.pack.js"></script>
+<title>Geom</title>
+<base href="../../"/>
+<script src="search.js"></script>
+<script src="show_hide.js"></script>
+</head>
+<body>
+<div class="main">
+<div class="breadcrumbs">
+<table id="results"></table>
+<a href="index.html" class="home">⌂</a><input type="search" id="search" placeholder="Search" onkeyup="searchSubmit(this.value, event)"/>
+<small>ggplotd.<a href=ggplotd/geom.html>geom</a>.</small><span class="highlight">Geom</span>
+</div>
+<div class="sidebar">
+<a href="ggplotd/geom.html#hide-toc" class="hide" id="hide-toc">&#171;</a>
+<a href="ggplotd/geom.html#show-toc" class="show" id="show-toc">&#187;</a>
+<div id="toc-id" class="toc">
+<ul><li><a href="example.html">example</a></li>
+<li><span class="package" onclick="show_hide('ggplotd');">ggplotd</span>
+<ul id="ggplotd" style='display:block'>
+<li>ggplotd.<a href="ggplotd/aes.html">aes</a></li>
+<li>ggplotd.<a href="ggplotd/axes.html">axes</a></li>
+<li>ggplotd.<a href="ggplotd/bounds.html">bounds</a></li>
+<li><span class="package" onclick="show_hide('ggplotd.color');">ggplotd.<a href="ggplotd/color.html">color</a></span>
+<ul id="ggplotd.color">
+<li>ggplotd.color.<a href="ggplotd/color/conv.html">conv</a></li>
+<li>ggplotd.color.<a href="ggplotd/color/hsx.html">hsx</a></li>
+<li>ggplotd.color.<a href="ggplotd/color/rgb.html">rgb</a></li>
+<li>ggplotd.color.<a href="ggplotd/color/xyz.html">xyz</a></li>
+</ul>
+</li>
+<li>ggplotd.<a href="ggplotd/colour.html">colour</a></li>
+<li>ggplotd.<a href="ggplotd/colourspace.html">colourspace</a></li>
+<li><span class=" selected">ggplotd.<a href="ggplotd/geom.html">geom</a></span>
+</li>
+<li>ggplotd.<a href="ggplotd/geometry.html">geometry</a></li>
+<li>ggplotd.<a href="ggplotd/ggplotd.html">ggplotd</a></li>
+<li>ggplotd.<a href="ggplotd/gtk.html">gtk</a></li>
+<li>ggplotd.<a href="ggplotd/math.html">math</a></li>
+<li>ggplotd.<a href="ggplotd/meta.html">meta</a></li>
+<li>ggplotd.<a href="ggplotd/range.html">range</a></li>
+<li>ggplotd.<a href="ggplotd/scale.html">scale</a></li>
+<li>ggplotd.<a href="ggplotd/stat.html">stat</a></li>
+<li>ggplotd.<a href="ggplotd/theme.html">theme</a></li>
+</ul>
+</li>
+
+</ul>
+</div></div>
+<div class="content">
+<div class="aggregate-symbol"><div class="description"><pre><code>public struct Geom
+</code></pre>
+<div class="section"><h2></h2>
+<p>Hold the data needed to draw to a plot context
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div><a class="anchor" id="this"></a><div class="symbol"><div class="description"><pre><code>public this(T)(in T tup)
+</code></pre>
+<div class="section"><h2></h2>
+<p>Construct from a tuple
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="draw"></a><div class="symbol"><div class="description"><pre><code>public drawFunction draw
+</code></pre>
+<div class="section"><h2></h2>
+<p>Function to draw to a cairo context
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="colours"></a><div class="symbol"><div class="description"><pre><code>public <a href="ggplotd/colour/ColourID.html">ColourID</a>[] colours
+</code></pre>
+<div class="section"><h2></h2>
+<p>Colours
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="bounds"></a><div class="symbol"><div class="description"><pre><code>public <a href="ggplotd/bounds/AdaptiveBounds.html">AdaptiveBounds</a> bounds
+</code></pre>
+<div class="section"><h2></h2>
+<p>Plot Bounds
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="mask"></a><div class="symbol"><div class="description"><pre><code>public <a href="http://dlang.org/type.html#basic-data-types">bool</a> mask
+</code></pre>
+<div class="section"><h2></h2>
+<p>Whether to mask/prevent drawing outside plotting area
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="xTickLabels"></a><div class="symbol"><div class="description"><pre><code>public Tuple!(<a href="http://dlang.org/type.html#basic-data-types">double</a>, string)[] xTickLabels
+</code></pre>
+<div class="section"><h2></h2>
+<p>Labels for xaxis ticks
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="yTickLabels"></a><div class="symbol"><div class="description"><pre><code>public Tuple!(<a href="http://dlang.org/type.html#basic-data-types">double</a>, string)[] yTickLabels
+</code></pre>
+<div class="section"><h2></h2>
+<p>Labels for yaxis ticks
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><div class="section members"><h2>Variables</h2><table><tr><td><a href="ggplotd/geom/Geom.html#draw">draw</a></td><td><pre><code>drawFunction
+</code></pre>
+</td><td></td></tr><tr><td><a href="ggplotd/geom/Geom.html#colours">colours</a></td><td><pre><code><a href="ggplotd/colour/ColourID.html">ColourID</a>[]
+</code></pre>
+</td><td></td></tr><tr><td><a href="ggplotd/geom/Geom.html#bounds">bounds</a></td><td><pre><code><a href="ggplotd/bounds/AdaptiveBounds.html">AdaptiveBounds</a>
+</code></pre>
+</td><td></td></tr><tr><td><a href="ggplotd/geom/Geom.html#mask">mask</a></td><td><pre><code><a href="http://dlang.org/type.html#basic-data-types">bool</a>
+</code></pre>
+</td><td></td></tr><tr><td><a href="ggplotd/geom/Geom.html#xTickLabels">xTickLabels</a></td><td><pre><code>Tuple!(<a href="http://dlang.org/type.html#basic-data-types">double</a>, string)[]
+</code></pre>
+</td><td></td></tr><tr><td><a href="ggplotd/geom/Geom.html#yTickLabels">yTickLabels</a></td><td><pre><code>Tuple!(<a href="http://dlang.org/type.html#basic-data-types">double</a>, string)[]
+</code></pre>
+</td><td></td></tr></table><h2>Functions</h2><table><tr><td><a href="ggplotd/geom/Geom.html#this">this</a></td><td></td><td></td></tr></table>
+</div>
+</div><script>hljs.initHighlightingOnLoad();</script>
+
+</div>
+<footer>
+Generated with <a href="https://github.com/kiith-sa/harbored-mod">harbored-mod</a>
+</footer>
+</div>
+</body>
+</html>
